@@ -5,7 +5,18 @@
   </head>
   <body>
     <header><%- include('partials/nav') %></header>
-    <h1>Ciao <%= nameUser %></h1>
-    <h2>sei nella home page</h2>
+    <main>
+      <nav class="main_side-menu">
+        <ul>
+          <li><a href="#">Cliente</a></li>
+          <li><a href="#">Modifica Cliente</a></li>
+          <li><a href="#">Elimina Cliente</a></li>
+        </ul>
+      </nav>
+      <section class="main_section">
+        <h1>Ciao <%= userName %></h1>
+        <h2>sei nella home page</h2>
+      </section>
+    </main>
   </body>
 </html>

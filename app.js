@@ -14,12 +14,19 @@ const routeProd = require('./routes/produzione')
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-  res.render('homepage', { pageTitle: 'Studio5 Home Page', nameUser: 'Fabrizio il re' })
+  res.render('homepage', { pageTitle: 'Studio5 Home Page', userName: 'Fabrizio Ventura' })
 })
 
 app.use(routeComm)
 app.use(routeProd)
 
+
+
+const Cliente = require('./model/Cliente')
+
+const cliente1 = new Cliente('Fabrizio', 'fab@example.it', '11111111')
+
+console.log(cliente1);
 
 
 app.listen(port, () => console.log(`server in ascolto sulla porta ${port}`))
