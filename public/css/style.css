@@ -8,6 +8,7 @@
   --secondary-color-font: #8f8ea5;
   --primary-background: #f8faff;
   --secondary-background: #dce1ec;
+  --primary-btn: #3246d3;
 }
 
 /* CSS RESET */
@@ -85,7 +86,7 @@ ul {
   cursor: pointer;
 }
 
-/* MAIN */
+/* MAIN - SIDE MENU*/
 main {
   display: flex;
 }
@@ -110,30 +111,72 @@ main {
   color: var(--secondary-color-font);
 }
 
-.main_side-menu a::selection {
+.main_side-menu li:hover a,
+.main_side-menu li:hover svg {
   color: var(--primary-color-font);
-}
-
-
-.main_side-menu img {
-  width: 20px;
-  margin-right: 20px;
-  fill: #8f8ea5;
-
+  fill: var(--primary-color-font);
 }
 
 .main_side-menu svg {
-  /* width: 20px !important; */
-  /* font-size: 10px; */
-  width: 20px;
+  width: 25px;
   margin-right: 20px;
-  fill: #8f8ea5;
+  fill: var(--secondary-color-font);
 }
+
+.main_nav_btn {
+  background-color: var(--primary-btn);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+/* ------------------------------------- */
+
+/* MAIN SECTION CLIENTI */
 
 .main_section {
   width: 80%;
   height: 100vh;
   padding: 120px 50px;
-
   background-color: var(--primary-background);
+  display: flex;
+}
+
+.main_section_all-clients {
+  width: 35%;
+  border: 1px solid red;
+  padding: 0 20px;
+}
+
+.all-clients_cliente {
+  padding: 20px 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: inline-block;
+}
+.all-clients_cliente_titolo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cliente-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cliente-icon svg {
+  width: 20px;
+}
+
+.main_section_client {
+  width: 65%;
+  border: 1px solid blue;
 }
