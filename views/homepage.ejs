@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('partials/head') %>
-  </head>
-  <body>
-    <header><%- include('partials/nav') %></header>
-    <main>
-      <nav class="main_side-menu">
-        <ul>
-          <li><a href="#">Cliente</a></li>
-          <li><a href="#">Modifica Cliente</a></li>
-          <li><a href="#">Elimina Cliente</a></li>
-        </ul>
-      </nav>
-      <section class="main_section">
-        <h1>Ciao <%= userName %></h1>
-        <h2>sei nella home page</h2>
-      </section>
-    </main>
-  </body>
+
+<head>
+  <%- include('partials/head') %>
+</head>
+
+<body>
+  <header><%- include('partials/nav') %></header>
+  <main>
+    <nav class="main_side-menu">
+      <ul>
+        <li><a href="#"><img src="img/clienti.svg" alt="icona clienti">Cliente</a></li>
+        <li><a href="#"><img src="img/clienti-modifica.svg" alt="icona clienti modifica">Modifica Cliente</a></li>
+        <li><a href="#">
+            <svg>
+              <use xlink:href="img/icon.svg#clienti-elimina"></use>
+            </svg>Elimina Cliente</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="main_section">
+      <h1>Ciao <%= userName %>
+      </h1>
+      <h2>sei nella home page</h2>
+    </section>
+  </main>
+</body>
+
 </html>
